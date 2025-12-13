@@ -1,0 +1,239 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  /* Give your font a descriptive name (this is what you'll use later) */
+  font-family: 'Ramillas Custom';
+
+  /* Specify the location of the font file(s) */
+  src: url('fonts/tt_ramillas/TT\ Ramillas\ Trial\ Regular.ttf')
+    format('truetype');
+
+  /* You can optionally specify the weight and style of this file */
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Variables */
+:root {
+  /* change to correct names */
+  --bg: #f3f4f0; /* 60% */
+  --surface: #ffffff; /* 30% */
+  --text: #1b1b1b; /* AAA on bg */
+  --heading: #4d0011; /* AAA on bg */
+  --accent: #4d0011; /* 10% primary CTA */
+  --accent-soft: #c2858d; /* secondary accent (NOT body text) */
+  --border: #a7adad; /* lines, strokes (NOT body text) */
+  --muted-aa: #6f6f6f; /* passes AA on bg */
+  --muted-aaa: #525252; /* passes AAA on bg */
+
+  /* change to correct fonts */
+  --ff: 'Noto Sans JP', serif;
+  --ff2: 'Fira Sans', serif;
+
+  --p: 1rem/1.5em var(--ff);
+  --h1: 600 3rem/1.2em var(--ff2);
+  --h2: 600 2rem/1.2em var(--ff2);
+
+  --spacing1: 4px;
+  --spacing2: 8px;
+  --spacing3: 16px;
+  --spacing4: 20px;
+  --spacing5: 40px;
+  --spacing6: 80px;
+  --spacing7: 160px;
+}
+
+/* Global Styles */
+html {
+  scroll-behavior: smooth;
+}
+body {
+  text-wrap: balance;
+  font: var(--p);
+}
+h1 {
+  font: var(--h1);
+}
+h2 {
+  font: var(--h2);
+  margin: var(--spacing2) 0;
+}
+p {
+  margin: var(--spacing2) 0;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  color: var(--color30);
+}
+
+/* header */
+header {
+  /* border: 1px solid black; */
+  width: 100%;
+  /* max-width: 1080px; */
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing4) var(--spacing3);
+}
+
+/* ---------------------------- */
+/* ---------------------------- */
+/* ---------------------------- */
+/* ---------------------------- */
+/* ---------------------------- */
+/* ---------------------------- */
+/* ---------------------------- */
+
+/* Container for the menu icon */
+html {
+  background-color: #ffffff;
+}
+
+header {
+  background-color: #4d0011;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.menu-icon {
+  width: 20px; /* Overall width of the icon */
+  height: 15px; /* Overall height of the icon */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Spaces the bars evenly */
+  align-items: space-between;
+  cursor: pointer;
+}
+
+/* Styling for the individual bars */
+.menu-icon span {
+  display: block;
+  width: 100%;
+  height: 3px; /* Thickness of each bar */
+  background-color: #ffffff; /* Color of the bars (dark gray) */
+  border-radius: 2px; /* Slight rounding for a softer look */
+}
+
+img {
+  width: 100px;
+  height: auto;
+  display: block;
+  position: relative;
+  bottom: 2px;
+}
+
+.header-left-box,
+.header-right-box {
+  width: 50%;
+}
+
+.header-right-box {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.button {
+  /* Basic Button Look */
+  display: inline-block; /* Allows padding/margin and sizing */
+  padding: 2.5px 8px;
+  border: none;
+  border-radius: 3px;
+  text-decoration: none; /* Removes the underline from the link */
+  cursor: pointer; /* Ensures the mouse cursor is a pointer */
+  text-align: center;
+
+  /* Color and Typography (Adjust as needed) */
+  background-color: #ffffff; /* Dark gray background */
+  color: #1b1b1b; /* White text */
+  font-size: 12px;
+
+  /* Hover Effect for Interaction */
+  transition: background-color 0.3s ease; /* Smooth color change */
+}
+
+.button:hover {
+  background-color: #c2858d; /* Slightly lighter on hover */
+  color: #1b1b1b;
+}
+
+/* body {
+  background-color: #4d0011;
+} */
+
+.accent-background-color {
+  background-color: #4d0011;
+  width: 100%;
+  height: 25vh;
+}
+
+.image-section {
+  display: flex;
+  width: 100%;
+  height: 80vh;
+  background-image: url('images/hero-background2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-title {
+  /* border: 1px solid black; */
+  color: #ffffff;
+  position: relative;
+  bottom: 38px;
+  text-align: center;
+}
+
+.hero-title span {
+  display: block; /* forces new line */
+  font-weight: 400;
+  font-size: 3.5rem;
+  font-family: 'Ramillas Custom', Arial, sans-serif;
+}
+
+.subtitle {
+  font-family: 'Ramillas Custom', Arial, sans-serif;
+  font-size: 13px;
+  position: relative;
+  bottom: 38px;
+  color: #f3f4f0;
+}
+
+.hero-button {
+  /* Basic Button Look */
+  display: inline-block; /* Allows padding/margin and sizing */
+  padding: 4px 18px;
+  border: 0.5px solid #ffffff;
+  border-radius: 3px;
+  text-decoration: none; /* Removes the underline from the link */
+  cursor: pointer; /* Ensures the mouse cursor is a pointer */
+  text-align: center;
+
+  /* Color and Typography (Adjust as needed) */
+  background-color: transparent; /* Dark gray background */
+  color: #ffffff; /* White text */
+  font-size: 13px;
+
+  /* Hover Effect for Interaction */
+  transition: background-color 0.3s ease; /* Smooth color change */
+}
+
+.hero-button:hover {
+  background-color: #c2858d; /* Slightly lighter on hover */
+  color: #1b1b1b;
+}
