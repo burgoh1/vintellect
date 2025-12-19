@@ -11,25 +11,23 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
 
-  <body class="body">
-    <header class="banner" role="banner">
-      <div class="header-left-box border">
-        <a class="" href="" aria-label="Home">
+  <body>
+    <header>
+      <div class="left"></div>
+
+      <div class="center">
+        <a href="" aria-label="Home">
           <img
-            src="./images/logo-white-text-cropped.svg"
+            src="./images/logo-red-text-cropped.svg"
             alt="vintellect logo"
-            class="logo border"
+            class="logo"
           />
         </a>
       </div>
 
-      <div class="header-right-box border">
-        <div class="button-container">
-          <a class="button" href="#contact">GET STARTED</a>
-        </div>
-        <!-- later swtich to 2 span burger that turns into x -->
+      <div class="right">
         <nav>
-          <div class="menu-icon">
+          <div class="menu-icon" aria-label="Menu">
             <span></span>
             <span></span>
             <span></span>
@@ -39,16 +37,63 @@
     </header>
 
     <main>
-      <div class="accent-background-color"></div>
-      <div class="image-section">
-        <h1 class="hero-title">
-          <span class="line-1">Invest in Your</span>
-          <span class="line-2">Glass</span>
-        </h1>
-        <p class="subtitle">where wine knowledge meets buisness strategy</p>
+      <section class="hero-marquee">
+        <div class="marquee-track">
+          <div class="slide">
+            <img src="images/hero-background.jpg" alt="Wine" />
+          </div>
+          <div class="slide">
+            <img src="images/hero-background2.jpg" alt="Wine" />
+          </div>
+          <div class="slide">
+            <img src="images/hero-background3.jpg" alt="Wine" />
+          </div>
 
-        <a class="hero-button" href="#contact">GET STARTED</a>
-      </div>
+          <!-- duplicates for marquee loop -->
+          <div class="slide">
+            <img src="images/hero-background.jpg" alt="Wine" />
+          </div>
+          <div class="slide">
+            <img src="images/hero-background2.jpg" alt="Wine" />
+          </div>
+          <div class="slide">
+            <img src="images/hero-background3.jpg" alt="Wine" />
+          </div>
+        </div>
+        <div class="hero-center">
+          <a href="" aria-label="Home">
+            <img
+              src="./images/logo-white-text-cropped.svg"
+              alt="vintellect logo"
+              class="hero-logo"
+            />
+          </a>
+        </div>
+      </section>
+
+      <section class="mission-section">
+        <h1 class="">Our <em>Mission</em></h1>
+        <p class="">
+          Most wine programs suffer from 'list fatigue' or stagnant margins. We
+          help businesses bridge that gap.
+        </p>
+        <p class="">
+          Whether it’s training staff to sell with confidence or re-engineering
+          a cellar for maximum efficiency, our goal is to make wine the most
+          profitable part of your business.
+        </p>
+        <p class="">
+          Our approach treats wine as both a cultural expression and a financial
+          engine. By aligning brand identity, staff education, operational
+          systems, and vendor relationships, we create programs that are
+          intuitive for guests, profitable on the floor, and manageable behind
+          the scenes. The result is a wine program that evolves with your
+          business.
+        </p>
+        <div class="">
+          <button></button>
+        </div>
+      </section>
     </main>
   </body>
 </html>
