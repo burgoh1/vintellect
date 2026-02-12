@@ -11,11 +11,6 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  background-color: #121212;
-  font-family: 'Interphase Custom';
-}
-
 a {
   text-decoration: none;
   color: inherit;
@@ -27,6 +22,24 @@ button {
   border: none;
   font: inherit;
   cursor: pointer;
+}
+
+:root {
+  --bg: #0f1113; /* warm charcoal */
+  --bg-2: #0a0a0a; /* subtle depth */
+  --surface: #14171a; /* section/card surface color */
+  --surface-soft: rgba(255, 255, 255, 0.04); /* card overlay */
+  --border-soft: rgba(255, 255, 255, 0.08); /* soft border */
+  --text: #f2eee9; /* off-white headings */
+  --muted: #c9c4bc; /* muted body text */
+  --muted-2: rgba(201, 196, 188, 0.72); /* secondary muted */
+  --accent: #991b1b; /* accent red */
+}
+
+body {
+  background: linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
+  font-family: 'Interphase Custom';
+  color: var(--text);
 }
 
 /* Custom Font */
@@ -43,16 +56,18 @@ button {
 }
 
 /* Styles */
+/* Section 1 */
 .navbar {
-  /* border: 2px solid white; */
   position: fixed;
   top: 0;
   z-index: 1000;
   display: flex;
   width: 100%;
   height: 80px;
-  background-color: #121212;
-  padding: 0 15px;
+  background-color: rgba(15, 17, 19, 0.75);
+  backdrop-filter: blur(14px);
+  padding: 0 22px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .logo-container {
@@ -62,9 +77,10 @@ button {
   align-items: center;
 }
 
+/* Logo */
 .vin-part,
 .tellect-part {
-  color: #991b1b;
+  color: var(--accent);
   font-size: 2.5em;
 }
 
@@ -77,21 +93,24 @@ button {
   height: 100%;
   display: flex;
   align-items: center;
-  gap: 28px;
+  justify-content: flex-end;
+  gap: 18px;
 }
 
+/* Nav CTA Button */
 .cta-button {
-  background: #991b1b;
-  color: #e2e8f0;
+  background: var(--accent);
+  color: var(--text);
   padding: 13px 20px;
   border-radius: 999px;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 1em;
   cursor: pointer;
   font-family: Arial, sans-serif;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
 }
 
-/* Hamburger */
+/* Hamburger Icon */
 .menu-icon {
   width: 25px;
   height: 19px;
@@ -99,16 +118,18 @@ button {
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
+  border-radius: 12px;
 }
 
 .menu-icon span {
   height: 4px;
-  background-color: #991b1b;
+  background-color: var(--accent);
   border-radius: 2px;
 }
 
+/* Hero */
 .hero-section {
-  min-height: 33rem;
+  min-height: 38rem;
   width: 100%;
   background-image: url('images/hero-test.jpg');
   background-size: cover;
@@ -118,27 +139,30 @@ button {
   margin-top: 80px;
 }
 
+/* Hero Gradient */
 .hero-section::before {
   content: '';
   position: absolute;
   width: 100%;
   height: 100%;
-  background: linear-gradient(0deg, #00000088 70%, #ffffff10 100%);
+  background: linear-gradient(
+    0deg,
+    rgba(10, 10, 10, 0.78) 55%,
+    rgba(10, 10, 10, 0.18) 100%
+  );
 }
 
+/* Hero Title */
 .hero-header-1,
-.hero-header-2,
-.hero-header-3 {
-  /* border: 2px solid white; */
+.hero-header-2 {
   font-family: 'Ramillas Custom';
   font-size: 3.5rem;
-  color: #e2e8f0;
+  color: var(--text);
   position: absolute;
   text-transform: capitalize;
   padding: 0 22px;
-  /* letter-spacing: -0.05em; */
-  /* text-align: center; */
   width: 100%;
+  letter-spacing: -0.02em;
 }
 
 .hero-header-1 {
@@ -149,27 +173,26 @@ button {
   top: 35%;
 }
 
-/* .hero-header-3 {
-  top: 43%;
-} */
-
+/* Hero Description */
 .hero-desc {
   font-family: 'Interphase Custom';
   font-size: 1.1rem;
-  color: #c3d2d5;
+  color: var(--muted);
   position: absolute;
   top: 51%;
-  line-height: 130%;
+  line-height: 140%;
   padding: 0 22px;
   width: 77%;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.45);
 }
 
+/* Hero CTA Button */
 .cta-button-hero {
-  background: #991b1b;
-  color: #e2e8f0;
+  background: var(--accent);
+  color: var(--text);
   padding: 13px 20px;
   border-radius: 999px;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 1em;
   cursor: pointer;
   font-family: Arial, sans-serif;
@@ -177,8 +200,11 @@ button {
   top: 78%;
   margin-left: 22px;
   text-transform: capitalize;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.38);
 }
 
+/* Section 2 */
+/* Credibility Icons */
 .credibility {
   display: flex;
   justify-content: center;
@@ -186,7 +212,6 @@ button {
   gap: 55px;
   padding: 40px 0;
   width: 100%;
-  background-color: #121212;
 }
 
 .cred-logo {
@@ -198,67 +223,68 @@ button {
   opacity: 0.8;
 }
 
-.third {
-  background-color: #121212;
-}
-
+/* Section 3 */
+/* Stats Title */
 .third-title {
-  /* border: 2px solid white; */
-  border-bottom: 2px solid #991b1b;
-  /* height: 10rem; */
-  color: #e2e8f0;
+  border-bottom: 0;
+  color: var(--text);
   text-transform: capitalize;
   font-family: 'Ramillas Custom';
   font-size: 1.9rem;
-  padding: 0px 25px 5px 0px;
-  background-color: #121212;
-  /* letter-spacing: -0.05em; */
+  padding: 0px 25px 10px 0px;
   line-height: 1.2;
   margin: 50px 22px 25px;
+  position: relative;
 }
 
+/* Stats Underline*/
+.third-title::after {
+  content: '';
+  display: block;
+  width: 92%;
+  height: 2px;
+  background: rgba(153, 27, 27, 0.75);
+  margin-top: 10px;
+  border-radius: 999px;
+}
+
+/* Stats Container */
 .stats-container {
-  /* border: 1px solid white; */
   height: auto;
   display: flex;
   flex-direction: column;
-  /* justify-content: space-evenly; */
-  background-color: #121212;
+  gap: 28px;
+  padding: 0 22px 20px;
 }
 
+/* Stats Cards */
 .stat-item {
-  /* border: 1px solid white; */
-  height: 230px;
+  height: auto;
   display: flex;
-  color: #e2e8f0;
-  background-color: #121212;
   flex-direction: column;
   justify-content: center;
-  margin: 0 22px;
-  border-bottom: 2px dashed #6f1111;
+  background: var(--surface-soft);
+  border: 1px solid var(--border-soft);
+  border-radius: 18px;
+  padding: 22px 18px;
 }
 
-.stats-container .stat-item:last-child {
-  border-bottom: none;
-}
-
+/* Stats Percent Number */
 .stat-num {
-  /* border: 1px solid white; */
   width: 100%;
-  color: #e2e8f0;
+  color: var(--text);
   text-align: center;
   font-size: 60px;
-  margin-bottom: 20px;
+  margin-bottom: 14px;
   font-family: 'Ramillas Custom';
 }
 
+/* Stats Description */
 .stat-desc {
-  /* border: 1px solid white; */
-  height: 100px;
-  max-height: 100px;
+  height: auto;
+  max-height: none;
   text-align: center;
-  line-height: 1.8;
-  padding: 0 30px;
-  color: #c3d2d5;
-  /* border-bottom: 2px dotted #991b1b; */
+  line-height: 1.75;
+  padding: 0 10px;
+  color: var(--muted);
 }

@@ -11,3 +11,25 @@ Documentation:
 02/06 - Oh me oh my... its been a while huh. Throughout the holidays I've been working on vintellect here and there. By here and there I mean revamping the whole UI haha. I wasn't satisfied with the old UI with the sliding pictures. I thought it took too much away from the message I was trying to convey. I realised though that creating the hero section was the hardest for me. I had to look up a lot of examples from other websites to eventually come up with my current design. As you can see in my HTML file, i want to make 8 different sections in the landing page and eventually expand it with different tabs and links as well as implement javaScript and make the best website ever! I will work on finishing up the rest of the sections and go from there.
 
 02/11 - I updated the background colors and spacing for the third section. I'm planning on implementing the fourth section which is the services section. I want there to be container cards that will either display a title and subheading and when clicked, will flip revealing more information on that certain topic or, I will have a regular card that will display the title and information about that topic without the flip function. I'll play around with those two and see which one fits with the website.
+
+02/12 - *PATCH NOTES*
+    - added color variables for more flexibility
+    - made nav bar transparent and updated background color
+    - added box-shadow and heavier font weight to nav cta button 
+    - increased height on hero background picture
+    - changes linear gradient for hero picture to decrease darkness
+    - added label comments for each section
+    - removed hero-header-3
+    - slight line spacing changes for hero description
+    - added text-shadow to hero description to add text visibility 
+    - added box-shadow to cta button inside hero background to add depth
+    - added universal background color to get rid of unnessesary background color property 
+    - added ::after to third-title to clean up red underline accent
+    - added increased spacing instead of dashed separators
+    - added padding for consistant spacing through each card
+    - added the cards for stat items
+    - updated stat desc line height, padding, height, and max-height
+
+
+
+
