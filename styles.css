@@ -198,6 +198,10 @@ button {
   opacity: 0.8;
 }
 
+.third {
+  background-color: #121212;
+}
+
 .third-title {
   /* border: 2px solid white; */
   border-bottom: 2px solid #991b1b;
@@ -205,13 +209,12 @@ button {
   color: #e2e8f0;
   text-transform: capitalize;
   font-family: 'Ramillas Custom';
-  font-size: 2.5rem;
+  font-size: 1.9rem;
   padding: 0px 25px 5px 0px;
   background-color: #121212;
   /* letter-spacing: -0.05em; */
   line-height: 1.2;
-  margin: 75px 22px 25px;
-  background-color: #2d2d2d;
+  margin: 50px 22px 25px;
 }
 
 .stats-container {
@@ -220,7 +223,7 @@ button {
   display: flex;
   flex-direction: column;
   /* justify-content: space-evenly; */
-  background-color: #2d2d2d;
+  background-color: #121212;
 }
 
 .stat-item {
@@ -228,11 +231,11 @@ button {
   height: 230px;
   display: flex;
   color: #e2e8f0;
-  background-color: #2d2d2d;
+  background-color: #121212;
   flex-direction: column;
   justify-content: center;
   margin: 0 22px;
-  border-bottom: 2px dashed #991b1b;
+  border-bottom: 2px dashed #6f1111;
 }
 
 .stats-container .stat-item:last-child {
